@@ -6,6 +6,10 @@
 
 // connect to the database, and exexute a query
 
+namespace Core;
+
+use PDO;
+
 class Database
 {
     public $connection;
