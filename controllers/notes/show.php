@@ -1,10 +1,9 @@
 <?php
 
+use Core\App;
 use Core\Database;
 
-// :: is scope resolution  operator. That give you access to a static or a constant that was define on the class.
-$config = require base_path('config.php');
-$db = new Database($config['database']);
+$db = App::resolve(Database::class);
 
 $currentUserId = 1;
 
