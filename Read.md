@@ -20,3 +20,12 @@ notes/update.php
 
 notes/destroy.php
     destroy is responsible for destroying the note, removing it from the database
+
+
+
+
+find cookie file
+php --info
+session.save_path => no value => no value
+
+echo $TMPDIR
