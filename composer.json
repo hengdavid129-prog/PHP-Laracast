@@ -1,0 +1,16 @@
+{
+    "name": "hengdavid/demo",
+    "authors": [
+        {
+            "name": "Heng David",
+            "email": "hengdavid129@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "HTTP\\": "HTTP/"
+        }
+    }
+}
