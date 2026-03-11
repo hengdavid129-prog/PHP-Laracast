@@ -21,7 +21,7 @@ class Session
 
     public static function flash($key, $value)
     {
-        $_SESSION['_flashed'][$key] = $value;
+        $_SESSION['_flash'][$key] = $value;
     }
 
     public static function unflash()
@@ -37,10 +37,10 @@ class Session
     public static function destroy()
     {
         static::flush();
-        
+
         session_destroy();
 
-        $param = session_get_cookie_params();
-        setcookie('PHPSESSID', '', time() - 3600, $param['path'], $param['domain'], $param['secure'], $param['httponly']);
+        $params = session_get_cookie_params();
+        setcookie('PHPSESSID', '', time() - 3600, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
     }
 }

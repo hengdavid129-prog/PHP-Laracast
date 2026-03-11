@@ -7,6 +7,7 @@ use Core\Validator;
 class LoginForm
 {
     protected $errors = [];
+    
     public function validate($email, $password)
     {
         if (!Validator::email($email)) {
