@@ -68,6 +68,11 @@ class Router
 
     }
 
+    public function previousUrl()
+    {
+        return $_SERVER['HTTP_REFERER'];
+    }
+
     protected function abort($code = 404)
     {
         http_response_code($code);
@@ -77,12 +82,3 @@ class Router
         die();
     }
 }
-
-// function routeToController($uri, $routes)
-// {
-//     if (array_key_exists($uri, $routes)) {
-//         require base_path($routes[$uri]);
-//     } else {
-//         abort();
-//     } 
-// }
